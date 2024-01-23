@@ -1,0 +1,166 @@
+.hero {
+  padding: 164px 0 54px;
+  box-sizing: border-box;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 125px;
+  }
+
+
+  &__title-container {
+    width: 100%;
+  }
+
+  &__title {
+    padding-left: 20px;
+    @include styleText(clamp(30px, 8vw, 36px), 400, 170%, 1.8px, uppercase);
+
+    &__custom-text {
+      @include styleText(clamp(30px, 8vw, 36px), 400, 170%, 1.8px, uppercase);
+      padding-left: 20px;
+      color: $white_color;
+      background-color: $black_color;
+      position: relative;
+
+    }
+  }
+
+  &__button {
+    margin-right: 20px;
+    @include buttonMobile();
+
+    &__arrow-up {
+      display: block;
+      height: 24px;
+    }
+
+    &__arrow-down {
+       display: none;
+    }
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width:531px) {
+  .hero {
+    padding: 227px 15px 54px;
+    box-sizing: border-box;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 116px;
+    }
+
+
+    &__title-container {
+      width: 100%;
+    }
+
+    &__title {
+      padding-left: 0;
+      @include styleText(48px, 400, 140%, 4.8px, uppercase);
+
+      &__custom-text {
+        @include styleText(48px, 400, 140%, 4.8px, uppercase);
+        padding-left: 0;
+        color: $white_color;
+        background-color: $black_color;
+        position: relative;
+
+      }
+    }
+
+    &__button {
+      margin-right: 0;
+      @include buttonTablet();
+
+      &__arrow-up {
+        display: block;
+        height: 28px;
+      }
+
+      &__arrow-down {
+        display: none;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+@media screen and (min-width:993px) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    padding: 221px 15px 54px;
+    box-sizing: border-box;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 118px;
+    }
+
+
+    &__title-container {
+      width: 100%;
+    }
+
+    &__title {
+      padding-left: 0;
+      @include styleText(80px, 400, 140%, 8px, uppercase);
+
+      &__custom-text {
+        max-width: 922px;
+        @include styleText(80px, 400, 140%, 8px, uppercase);
+        padding-left: 0;
+        color: $white_color;
+        background-color: $black_color;
+        position: relative;
+
+      }
+    }
+
+    &__button {
+      margin-right: 20px;
+      @include buttonDesktop();
+
+      &__arrow-up {
+        display: block;
+        height: 35px;
+      }
+
+      &__arrow-down {
+        display: none;
+      }
+
+      &:hover {
+        background-color: $black_color;
+        color: $white_color;
+      }
+      &:hover &__arrow-up {
+        display: none;
+      }
+
+      &:hover &__arrow-down {
+        display: block;
+        height: 35px;
+      }
+    }
+  }
+}

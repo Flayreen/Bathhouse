@@ -1,0 +1,100 @@
+//@import "variable";
+
+@mixin styleText($font-size, $font-weight, $line-height, $letter-spacing, $text-transform) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-transform: $text-transform;
+  color: $black_color;
+  font-style: normal;
+}
+
+
+
+@mixin buttonMobile() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid $black_color;
+  background-color: $white_color;
+  width: 180px;
+  height: 60px;
+
+  @include styleText(16px, 400, 150%, 1.6px, capitalize);
+  text-decoration: none;
+}
+
+@mixin buttonTablet() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid $black_color;
+  background-color: $white_color;
+  width: 254px;
+  height: 60px;
+
+  @include styleText(20px, 400, 150%, 2px, capitalize);
+  text-decoration: none;
+}
+
+@mixin buttonDesktop() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid $black_color;
+  background-color: $white_color;
+  width: 287px;
+  height: 71px;
+
+  @include styleText(24px, 400, 150%, 2.4px, capitalize);
+  text-decoration: none;
+}
+
+
+
+
+
+@mixin containerMobile() {
+  padding: 20px;
+  box-sizing: border-box;
+}
+@mixin containerTablet() {
+  padding: 15px;
+  box-sizing: border-box;
+}
+@mixin containerDesktop() {
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+
+
+
+
+@mixin h2_mobile() {
+  @include styleText(24px, 400, 170%, 2.4px, uppercase);
+}
+@mixin h2_tablet() {
+  @include styleText(20px, 400, 170%, 2px, uppercase);
+}
+@mixin h2_desktop() {
+  @include styleText(28px, 400, 170%, 2.8px, uppercase);
+}
+
+
+@mixin body_mobile() {
+  @include styleText(16px, 400, 170%, 0%, none);
+}
+@mixin body_tablet() {
+  @include styleText(15px, 400, 170%, 0%, none);
+}
+@mixin body_desktop() {
+  @include styleText(18px, 400, 170%, 0%, none);
+}
+

@@ -1,0 +1,196 @@
+.footer {
+  @include containerMobile();
+  margin-top: 96px;
+
+  &__wrapper {
+    border-top: 1px solid $black_color;
+    padding: 16px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  & a {
+    text-decoration: none;
+  }
+
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    &__image {
+      height: 31px;
+    }
+    &__text {
+      @include styleText(14px, 600, 150%, 1.4px, uppercase);
+    }
+  }
+
+
+  &__info {
+    width: 100%;
+
+    &__contacts-container {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: center;
+
+      &__contact {
+        @include styleText(12px, 400, 170%, 0, none);
+      }
+    }
+
+
+    &__navigation {
+      display: none;
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width:768px) {
+  .footer {
+    @include containerTablet();
+    margin-top: 118px;
+
+    &__wrapper {
+      border-top: 1px solid $black_color;
+      padding: 37px 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    & a {
+      text-decoration: none;
+    }
+
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+
+      &__image {
+        height: 34px;
+      }
+      &__text {
+        @include styleText(13px, 600, 150%, 1.3px, uppercase);
+      }
+    }
+
+
+    &__info {
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      gap: 24px;
+
+      &__contacts-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 27px;
+        justify-content: center;
+        align-items: center;
+
+        &__contact {
+          @include styleText(13px, 400, 170%, 0, none);
+        }
+      }
+
+
+      &__navigation {
+        display: flex;
+        gap: 29px;
+
+        &__link {
+          @include styleText(13px, 400, 170%, 0, none);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (min-width:1270px) {
+  .footer {
+    @include containerDesktop();
+    margin-top: 110px;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      border-top: 1px solid $black_color;
+      padding: 40px 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    & a {
+      text-decoration: none;
+    }
+
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+
+      &__image {
+        height: 41px;
+      }
+      &__text {
+        @include styleText(16px, 600, 150%, 1.6px, uppercase);
+      }
+    }
+
+
+    &__info {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+
+      &__contacts-container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 45px;
+        justify-content: flex-start;
+        align-items: center;
+
+        &__contact {
+          @include styleText(16px, 400, 170%, 0, none);
+        }
+      }
+
+
+      &__navigation {
+        display: flex;
+        gap: 45px;
+
+        &__link {
+          @include styleText(16px, 400, 170%, 0, none);
+        }
+      }
+    }
+  }
+}

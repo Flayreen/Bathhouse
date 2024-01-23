@@ -1,0 +1,363 @@
+.services {
+  @include containerMobile();
+  padding-top: 130px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+  }
+
+
+  &__content {
+    width: 100%;
+    display: flex;
+    gap: 24px;
+
+    &__info {
+      display: none;
+    }
+  }
+
+
+  &__title-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__title {
+      width: 50%;
+      @include h2_mobile();
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $black_color;
+        margin-top: 16px;
+      }
+    }
+  }
+
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $gray_color;
+      }
+
+      &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__text {
+          @include styleText(20px, 400, 170%, 0%, none);
+        }
+
+        &__arrow-up {
+          display: block;
+          height: 30px;
+        }
+        &__arrow-up-gray {
+          display: none;
+        }
+        &__arrow-down {
+          display: none;
+          height: 30px;
+        }
+      }
+
+      &__description {
+        display: none;
+        @include body_mobile();
+
+        &--show {
+          display: block;
+        }
+      }
+
+      &--mob-active {
+        .services__list__item__title__arrow-up {
+          display: none;
+        }
+
+        .services__list__item__title__arrow-down {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width:768px) {
+  .services {
+    @include containerTablet();
+    padding-top: 130px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 86px;
+    }
+
+
+    &__content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 42.5%;
+      gap: 49px;
+
+      &__info {
+        display: block;
+        @include styleText(15px, 400, 170%, 0%, none);
+      }
+    }
+
+
+    &__title-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &__title {
+        width: 42.5%;
+        @include h2_tablet();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+    }
+
+
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $gray_color;
+        }
+
+        &__title {
+          display: flex;
+          justify-content: flex-end;
+          gap: 20px;
+          align-items: center;
+
+          &__text {
+            @include styleText(17px, 400, 170%, 1.7px, none);
+          }
+
+          &__arrow-up {
+            display: block;
+            height: 25px;
+          }
+          &__arrow-up-gray {
+            display: none;
+            height: 25px;
+          }
+          &__arrow-down {
+            display: none;
+            height: 25px;
+          }
+        }
+
+        &__description {
+          @include body_tablet();
+
+          &--show {
+            display: none;
+          }
+        }
+
+        &--active-desk {
+          .services__list__item__title__arrow-up {
+            display: none;
+          }
+
+          .services__list__item__title__arrow-down {
+            display: block;
+          }
+        }
+
+        &--disabled-desk {
+
+          .services__list__item__title__text {
+            color: $gray_color;
+          }
+          .services__list__item__title__arrow-up {
+            display: none;
+          }
+          .services__list__item__title__arrow-up-gray {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width:1270px) {
+  .services {
+    @include containerDesktop();
+    padding-top: 90px;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      display: flex;
+      flex-direction: column;
+      gap: 86px;
+    }
+
+
+    &__content {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 40.5%;
+      gap: 84px;
+
+      &__info {
+        display: block;
+        @include body_desktop();
+      }
+    }
+
+
+    &__title-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &__title {
+        width: 40.5%;
+        @include h2_desktop();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+    }
+
+
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $gray_color;
+        }
+
+        &__title {
+          display: flex;
+          justify-content: flex-end;
+          gap: 28px;
+          align-items: center;
+
+          &__text {
+            @include styleText(24px, 400, 150%, 2.4px, none);
+          }
+
+          &__arrow-up {
+            display: block;
+            height: 35px;
+          }
+          &__arrow-up-gray {
+            display: none;
+            height: 35px;
+          }
+          &__arrow-down {
+            display: none;
+            height: 35px;
+          }
+        }
+
+        &__description {
+          @include body_desktop();
+
+          &--show {
+            display: none;
+          }
+        }
+
+        &--active-desk {
+          .services__list__item__title__arrow-up {
+            display: none;
+          }
+
+          .services__list__item__title__arrow-down {
+            display: block;
+          }
+        }
+
+        &--disabled-desk {
+
+          .services__list__item__title__text {
+            color: $gray_color;
+          }
+          .services__list__item__title__arrow-up {
+            display: none;
+          }
+          .services__list__item__title__arrow-up-gray {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

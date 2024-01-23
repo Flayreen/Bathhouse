@@ -1,0 +1,121 @@
+.benefits {
+  @include containerMobile();
+  margin-top: 185px;
+
+  &__wrapper {
+    //display: flex;
+    //flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px;
+  }
+
+
+  &__item {
+    display: grid;
+    flex-direction: column;
+    gap: 16px;
+
+    &__title {
+      @include h2_mobile();
+
+      &:after {
+        content: "";
+        display: block;
+        width: 200px;
+        height: 0.5px;
+        background-color: $black_color;
+        margin-top: 16px;
+      }
+    }
+
+    &__description {
+      @include body_mobile();
+    }
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:768px) {
+  .benefits {
+    @include containerTablet();
+    margin-top: 100px;
+
+    &__wrapper {
+      //display: flex;
+      //flex-direction: row;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &__title {
+        @include h2_tablet();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 137px;
+          height: 0.5px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+
+      &__description {
+        @include body_tablet();
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width:1270px) {
+  .benefits {
+    @include containerDesktop();
+    margin-top: 129px;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      &__title {
+        @include h2_desktop();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 212px;
+          height: 0.5px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+
+      &__description {
+        @include body_desktop();
+      }
+    }
+  }
+}

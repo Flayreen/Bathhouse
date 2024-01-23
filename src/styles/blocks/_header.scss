@@ -1,0 +1,273 @@
+
+.header {
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  background-color: $white_color;
+  padding: 32px 10px 0 20px;
+  box-sizing: border-box;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-decoration: none;
+
+    &__text {
+      @include styleText(14px, 600, 150%, 1.4px, uppercase);
+    }
+  }
+
+
+  &__navigation {
+    display: none;
+  }
+
+
+  &__burger-logo {
+    display: flex;
+    align-items: center;
+
+    &__burger {
+      height: 55px;
+      width: 50px;
+      padding: 0;
+      border: none;
+      background-color: $white_color;
+    }
+
+    &__close {
+      display: none;
+      height: 55px;
+      width: 50px;
+      padding: 0;
+      border: none;
+      background-color: $white_color;
+    }
+
+    &__logo {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (min-width:834px) {
+  .header {
+    padding: 22px 15px 34px;
+    box-sizing: border-box;
+
+
+    &__logo {
+      &__image {
+        display: none;
+      }
+
+      &__text {
+        @include styleText(14px, 600, 150%, 1.4px, uppercase);
+      }
+    }
+
+
+    &__navigation {
+      display: flex;
+      gap: 20px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        box-sizing: border-box;
+
+        @include styleText(15px, 400, 150%, 1.5px, capitalize);
+        text-decoration: none;
+
+        &:hover {
+          border: 1px solid $black_color;
+        }
+      }
+    }
+
+
+    &__burger-logo {
+      display: flex;
+      align-items: center;
+
+      &__burger {
+        display: none;
+      }
+
+      &__logo {
+        display: block;
+
+        & img {
+          height: 34px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+@media screen and (min-width:1270px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    padding: 28px 0;
+    box-sizing: border-box;
+
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    &__logo {
+      &__image {
+        display: none;
+      }
+
+      &__text {
+        @include styleText(16px, 600, 150%, 1.6px, uppercase);
+      }
+    }
+
+
+    &__navigation {
+      display: flex;
+      gap: 25px;
+
+      &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 20px;
+        border: 1px solid $white_color;
+
+        @include styleText(16px, 400, 150%, 1.6px, capitalize);
+        text-decoration: none;
+        box-sizing: border-box;
+
+        &:hover {
+          border: 1px solid $black_color;
+        }
+      }
+    }
+
+
+    &__burger-logo {
+      display: flex;
+      align-items: center;
+
+      &__burger {
+        display: none;
+      }
+
+      &__logo {
+        display: block;
+
+        & img {
+          height: 41px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.burger-menu {
+  background-color: $white_color;
+
+  &__dark-background {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 87px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  &__wrapper {
+    padding: 78px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 129px;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+
+
+  &__navigation {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &__link {
+      @include h2_mobile();
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $black_color;
+        margin-top: 24px;
+      }
+    }
+  }
+
+
+  &__contacts {
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+
+    &__contact {
+      @include styleText(20px, 400, 170%, 0, none);
+    }
+
+    &__button {
+      @include buttonMobile();
+
+      &__arrow-up {
+        display: block;
+        height: 24px;
+      }
+      &__arrow-down {
+        display: none;
+        height: 24px;
+      }
+    }
+  }
+}

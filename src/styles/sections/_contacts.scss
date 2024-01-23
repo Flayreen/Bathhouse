@@ -1,0 +1,243 @@
+.contacts {
+  @include containerMobile();
+  padding-top: 130px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 86px;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+
+  &__title-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    &__title {
+      width: 50%;
+      @include h2_mobile();
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $black_color;
+        margin-top: 16px;
+      }
+    }
+  }
+
+
+  &__content {
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &__link {
+      @include styleText(20px, 400, 170%, 0, none);
+      text-decoration: none;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 275px;
+        height: 1px;
+        background-color: $black_color;
+        margin-top: 32px;
+      }
+    }
+
+    &__button {
+      @include buttonMobile();
+
+      &__arrow-up {
+        display: block;
+        height: 24px;
+      }
+      &__arrow-down {
+        display: none;
+        height: 24px;
+      }
+    }
+  }
+}
+
+
+
+
+
+@media screen and (min-width:768px) {
+  .contacts {
+    @include containerTablet();
+    padding-top: 130px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 86px;
+    }
+
+
+    &__title-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &__title {
+        width: 42.5%;
+        @include h2_tablet();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+    }
+
+
+    &__content {
+      width: 42%;
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+      gap: 24px;
+
+      &__link {
+        width: 100%;
+        @include styleText(17px, 400, 150%, 1.7px, none);
+        text-decoration: none;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 24px;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+      }
+      &__button {
+        margin-top: 34px;
+        @include buttonTablet();
+
+        &__arrow-up {
+          display: block;
+          height: 28px;
+        }
+        &__arrow-down {
+          display: none;
+          height: 28px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width:1270px) {
+  .contacts {
+    @include containerDesktop();
+    padding-top: 155px;
+
+    &__wrapper {
+      width: 100%;
+      max-width: 1240px;
+      display: flex;
+      flex-direction: column;
+      gap: 150px;
+    }
+
+
+    &__title-container {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+
+      &__title {
+        width: 40.5%;
+        @include h2_desktop();
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 16px;
+        }
+      }
+    }
+
+
+    &__content {
+      width: 40%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 36px;
+
+      &__link {
+        width: 100%;
+        @include styleText(24px, 400, 150%, 2.4px, none);
+        text-decoration: none;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $black_color;
+          margin-top: 36px;
+        }
+      }
+
+      & a {
+        text-decoration: none;
+      }
+      &__button {
+        margin-top: 0;
+        @include buttonDesktop();
+
+        &__arrow-up {
+          display: block;
+          height: 35px;
+        }
+        &__arrow-down {
+          display: none;
+          height: 35px;
+        }
+
+
+        &:hover {
+          background-color: $black_color;
+          color: $white_color;
+          cursor: pointer;
+
+          .contacts__content__button__arrow-up {
+            display: none;
+          }
+          .contacts__content__button__arrow-down {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
