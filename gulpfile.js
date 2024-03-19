@@ -12,6 +12,7 @@ import flexFix from 'postcss-flexbugs-fixes';
 // Пакети для HTML
 import fileInclude from 'gulp-file-include';
 import prettyHtml from 'gulp-pretty-html';
+import htmlmin from 'gulp-htmlmin';
 
 // Пакети для JS
 import concat from 'gulp-concat';
@@ -53,6 +54,7 @@ task('moveHTML', function () {
 			indent_char: ' ',
 			unformatted: ['code', 'pre', 'em', 'strong', 'span', 'i', 'b', 'br']
 		}))
+		.pipe(htmlmin({ collapseWhitespace: true }))
 		.pipe(dest('./dist'))
 		.pipe(browserSync.stream())
 })

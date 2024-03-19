@@ -220,6 +220,7 @@
 
         .project__hidden-photo {
           opacity: 0;
+          transition: 500ms;
           &:hover {
             opacity: 1;
             cursor: pointer;

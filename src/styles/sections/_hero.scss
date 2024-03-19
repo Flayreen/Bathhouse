@@ -139,6 +139,7 @@
     &__button {
       margin-right: 20px;
       @include buttonDesktop();
+      transition: 500ms;
 
       &__arrow-up {
         display: block;
@@ -152,6 +153,7 @@
       &:hover {
         background-color: $black_color;
         color: $white_color;
+        cursor: pointer;
       }
       &:hover &__arrow-up {
         display: none;

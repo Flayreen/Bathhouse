@@ -214,6 +214,7 @@
       &__button {
         margin-top: 0;
         @include buttonDesktop();
+        transition: 500ms;
 
         &__arrow-up {
           display: block;
